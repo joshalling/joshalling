@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "josh-alling-blog",
+  "description": "A developer blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Josh Alling",
   "dependencies": {
     "gatsby": "^2.0.88",
     "gatsby-image": "^2.0.20",
