@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Image from 'gatsby-image'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -21,19 +22,30 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          console.log(node)
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
                   {title}
-                </Link>
-              </h3>
+                </h3>
+                {node.frontmatter.image && (
+                  <Image
+                    sizes={node.frontmatter.image.childImageSharp.sizes}
+                    alt={title}
+                  />
+                )}
+              </Link>
               <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description,
+                }}
+              />
             </div>
           )
         })}
@@ -54,13 +66,20 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            description
             title
+            image {
+              childImageSharp {
+                sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

@@ -2,7 +2,6 @@
 title: 'The Job and The Developer Interview'
 description: These are a few things that I took away from my first developer interview experience. I hope others can learn from them as they try to get into this exciting field.
 date: '2015-10-24'
-image: ''
 ---
 
 About 6 weeks ago I noticed a web developer position open up at a company that I worked at previously. I applied there, but I wasn’t super optimistic about it because of my lack of professional experience. I thought that I might get to experience a developer interview to help me know what to expect in the future.

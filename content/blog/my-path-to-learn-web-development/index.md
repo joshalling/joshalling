@@ -2,7 +2,6 @@
 title: 'My Path to Learn Web Development'
 description: This post describes my 2 year journey of learning to code
 date: '2015-09-07'
-image: ''
 ---
 
 In November of 2013 I was one month from graduating with a BA in Communications. I hadn’t found a real job, or even an internship, and I was starting to worry. While working part time in a warehouse, of all places, I heard about a site called Codecademy that taught technical Web Development skills for free. I figured it would be a good idea to gain some useful technical skills as a back up plan so I joined Codecademy that day and began learning.
