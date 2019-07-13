@@ -15,4 +15,4 @@ Your first thought might be to assign a boolean to a variable within your click 
 
 A simple way to solve this is to put your boolean variable in the global scope, however you have to be careful here as you don't want to overwrite any variables or have this variable unintentionally overwritten later on. Just be very specific when naming this variable. I named it "within_first_modal" in my example. Once you have your variable set up, be sure to remember to change it back to false as a reset after the address form is closed. You will also want to make sure that all of your close options use that same handler (i.e. close button, x button, overlay).
 
-You can view my example [here](http://codepen.io/joshalling/pen/XmymMN) at codepen to see exactly how I set up these Bootstrap Modals. If you have thought of another way to solve this problem, feel free to share it in the comments below.
+You can view my example [here](https://codepen.io/joshalling/pen/LBwOBz) at codepen to see exactly how I set up these Bootstrap Modals. If you have thought of another way to solve this problem, feel free to share it in the comments below.
